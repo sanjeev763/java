@@ -24,7 +24,8 @@ public class ComparatorPractice<S> {
         words.sort(null); // here sorting uses comparator with default natural ascending order
         System.out.println(words);
 
-        //Comparator is an interface which is used for customized sorting. It is a functional interface.
+        //Comparator is an interface which is used for customized sorting(not natural ordering).Also, when we want to sort along multiple fields.
+        // It is a functional interface.
         // Means we can use lambda expression and need to implement the compare method from Comparator interface.
         words.sort((a,b) -> b.length() - a.length());
         System.out.println(words);
