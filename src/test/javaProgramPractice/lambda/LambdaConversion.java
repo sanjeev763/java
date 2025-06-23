@@ -1,5 +1,7 @@
 package lambda;
+//lambda expression is an anonymous function(no name, no return type, no access modifier)
 //For using lambda expression implemented interface must have only 1 method.
+// (Functional interface - single abstract method)
 public class LambdaConversion {
     public static void main(String[] args) {
         GreetingServices hiServices = new GreetingServices() {
