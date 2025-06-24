@@ -3,8 +3,10 @@ package java8;
 import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Java8StreamTerminalOperation {
     public static void main(String[] args) {
@@ -22,6 +24,10 @@ public class Java8StreamTerminalOperation {
         System.out.println(optionalInteger.get());
 
         //4. count
+
+        //min, max
+
+        //toArray
 
         //----------- short circuit operation(As soon as it finds the matching result it stops processing further) ----------------------//
         //5. anyMatch, allMatch, noneMatch
@@ -56,5 +62,11 @@ public class Java8StreamTerminalOperation {
         //Stateful & stateless
         //stateful - keeps other elements under consideration (like Filtering string on the basis of length)
         //stateless - Doesn't bother about the other elements (like doing square of numbers using map)
+
+        //If any terminal operation is already used on any stream then it means that stream has been consumed
+        //and we can't reuse the same stream further.
+        Stream<String> stream = namelist.stream();
+        stream.forEach(System.out::println);
+        stream.map(String::toUpperCase); //illegalStateException : stream has already been operated upon or closed
     }
 }
