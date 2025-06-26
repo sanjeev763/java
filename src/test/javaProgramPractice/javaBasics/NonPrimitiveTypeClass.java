@@ -12,8 +12,9 @@ public class NonPrimitiveTypeClass {
         arr.add("C");
     }
     public static void modifyString(String s){
+        System.out.println("just before modification : "+s);
         s = "test";
-        System.out.println(s);
+        System.out.println("modified : "+s);
 
     }
     public static void main(String[] args) {
