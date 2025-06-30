@@ -12,7 +12,7 @@ public class MergeTwoArrays {
         for(int i=0; i< arr1.length; i++){
             mergedArr[i] = arr1[i];
         }
-        for(int i=arr2.length; i< totalLen; i++){
+        for(int i=arr1.length; i< totalLen; i++){
             mergedArr[i] = arr2[k];
             k++;
         }
